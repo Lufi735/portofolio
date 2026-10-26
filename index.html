@@ -3465,6 +3465,145 @@ footer.stripe-footer {
 }
 
 /* ==========================================================================
+   MOBILE & TOUCH REFINEMENTS (LUFISPRITE & RESPONSIVE POLISH)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Navbar Compactness across all mobile screens */
+  .theme-btn span, .audio-toggle-btn span {
+    display: none !important;
+  }
+  .theme-btn, .audio-toggle-btn {
+    padding: 6px 9px !important;
+  }
+  .nav-right-actions {
+    gap: 6px !important;
+  }
+  .web20-edition-tag, .web20-beta-badge {
+    display: none !important;
+  }
+
+  /* LufiSprite Studio Mobile Overhaul */
+  .lufi-view-wrapper {
+    gap: 20px !important;
+  }
+  .lufi-overview-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  .lufi-info-panel, .lufi-gallery-panel {
+    padding: 20px 16px !important;
+    border-radius: 16px !important;
+  }
+  .lufi-logo-brand {
+    font-size: clamp(26px, 7vw, 34px) !important;
+    letter-spacing: -0.5px !important;
+  }
+  .lufi-logo-brand .lufi-sub {
+    font-size: 11px !important;
+    letter-spacing: 2px !important;
+    padding: 2px 6px !important;
+  }
+  .lufi-tagline {
+    font-size: 13px !important;
+    margin-top: 6px !important;
+    line-height: 1.4 !important;
+  }
+  .lufi-description-p {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 18px !important;
+  }
+  .lufi-features-grid {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+    margin-bottom: 18px !important;
+  }
+  .lufi-feat-item {
+    padding: 9px 12px !important;
+    border-radius: 10px !important;
+  }
+  .lufi-feat-icon {
+    font-size: 15px !important;
+  }
+  .lufi-feat-title {
+    font-size: 12px !important;
+  }
+  .lufi-feat-sub {
+    font-size: 10.5px !important;
+  }
+  .lufi-panel-footer {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    padding-top: 14px !important;
+  }
+  .lufi-badge-tech, .lufi-panel-footer .s-tag {
+    font-size: 11px !important;
+    padding: 4px 10px !important;
+  }
+
+  /* Gallery Mobile Tweaks */
+  .lufi-window-top {
+    margin-bottom: 10px !important;
+    padding-bottom: 8px !important;
+  }
+  .lufi-preview-box {
+    border-radius: 10px !important;
+    max-height: 280px !important;
+  }
+  .lufi-nav-btn {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  .lufi-nav-prev { left: 8px !important; }
+  .lufi-nav-next { right: 8px !important; }
+  .lufi-screen-caption {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+  .lufi-caption-title {
+    font-size: 13.5px !important;
+  }
+  .lufi-caption-desc {
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+  }
+  .lufi-thumbs-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 6px !important;
+  }
+  .lufi-thumb-item {
+    border-radius: 6px !important;
+  }
+
+  /* Hero Social Icons Mobile Wrap */
+  .hero-social-dock {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+  .hero-social-icons {
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+  .social-icon-btn {
+    width: 34px !important;
+    height: 34px !important;
+  }
+}
+
+/* Touchscreens: Disable custom pixel cursor & heavy trail */
+@media (hover: none) and (pointer: coarse) {
+  *, *::before, *::after, html, body, a, button, [onclick] {
+    cursor: auto !important;
+    -webkit-tap-highlight-color: transparent;
+  }
+  #cursor-trail-canvas, #cursor-glow {
+    display: none !important;
+  }
+}
+
+/* ==========================================================================
    UNIFIED THEME SWITCHER COMPONENT (STRIPE DARK & WEB 2.0 GLOSS)
    ========================================================================== */
 .theme-switcher-stripe {
@@ -8778,8 +8917,8 @@ body.is-pixel-resolving #h-bio {
 
       </div>
 
-      <!-- BOTTOM SECTION: CREATIONS MADE WITH LUFISPRITE -->
-      <div class="lufi-works-section">
+      <!-- BOTTOM SECTION: CREATIONS MADE WITH LUFISPRITE (Gecici olarak gizlendi) -->
+      <div class="lufi-works-section" style="display:none !important;">
         <div class="lufi-works-header">
           <div class="lufi-works-title-area">
             <span class="s-tag" style="background:rgba(56,189,248,0.12); color:#38bdf8; border:1px solid rgba(56,189,248,0.3); font-size:11.5px; padding:4px 10px; border-radius:999px; font-weight:700;">
