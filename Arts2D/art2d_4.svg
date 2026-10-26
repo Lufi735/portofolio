@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <defs>
+    <radialGradient id="sigilBg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#1e1035"/>
+      <stop offset="60%" stop-color="#0f0720"/>
+      <stop offset="100%" stop-color="#05020a"/>
+    </radialGradient>
+    <linearGradient id="neonPink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="50%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="neonCyan" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <filter id="sigilGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="800" fill="url(#sigilBg)"/>
+
+  <!-- Outer Concentric Rune Rings -->
+  <circle cx="400" cy="400" r="310" fill="none" stroke="rgba(236,72,153,0.18)" stroke-width="2"/>
+  <circle cx="400" cy="400" r="280" fill="none" stroke="rgba(168,85,247,0.3)" stroke-width="1.5" stroke-dasharray="12,8"/>
+  <circle cx="400" cy="400" r="250" fill="none" stroke="rgba(6,182,212,0.22)" stroke-width="2"/>
+
+  <!-- Rotating Star Polygons / Crest Facets -->
+  <!-- 8-Pointed Star Layer 1 (Pink / Purple) -->
+  <polygon points="400,140 450,300 610,250 490,360 660,400 490,440 610,550 450,500 400,660 350,500 190,550 310,440 140,400 310,360 190,250 350,300" fill="rgba(236,72,153,0.12)" stroke="url(#neonPink)" stroke-width="2.5" filter="url(#sigilGlow)"/>
+
+  <!-- Inner Diamond Crest (Cyan / Blue) -->
+  <polygon points="400,210 540,400 400,590 260,400" fill="rgba(6,182,212,0.15)" stroke="url(#neonCyan)" stroke-width="2.5" filter="url(#sigilGlow)"/>
+
+  <!-- Central Core Crystal / Gem -->
+  <polygon points="400,280 480,400 400,520 320,400" fill="url(#neonPink)" opacity="0.6"/>
+  <polygon points="400,320 450,400 400,480 350,400" fill="#ffffff" opacity="0.85" filter="url(#sigilGlow)"/>
+  
+  <circle cx="400" cy="400" r="28" fill="#ffffff" filter="url(#sigilGlow)"/>
+  <circle cx="400" cy="400" r="14" fill="#a855f7"/>
+
+  <!-- Corner Flourishes -->
+  <g stroke="rgba(236,72,153,0.4)" stroke-width="2" fill="none">
+    <path d="M220 220 L260 220 L260 260"/>
+    <path d="M580 220 L540 220 L540 260"/>
+    <path d="M220 580 L260 580 L260 540"/>
+    <path d="M580 580 L540 580 L540 540"/>
+  </g>
+</svg>

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="35%" stop-color="#0b1329"/>
+      <stop offset="70%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <radialGradient id="giantMoon" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="45%" stop-color="#bae6fd"/>
+      <stop offset="85%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </radialGradient>
+    <filter id="moonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="30" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="lakeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="40%" stop-color="#141e33"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Sky -->
+  <rect width="800" height="800" fill="url(#skyGrad)"/>
+
+  <!-- Stars -->
+  <g fill="#ffffff" opacity="0.7">
+    <circle cx="120" cy="90" r="1.5"/>
+    <circle cx="250" cy="140" r="1"/>
+    <circle cx="340" cy="80" r="2"/>
+    <circle cx="680" cy="110" r="1.5"/>
+    <circle cx="730" cy="180" r="1"/>
+    <circle cx="190" cy="220" r="1"/>
+    <circle cx="620" cy="70" r="2.5"/>
+    <circle cx="450" cy="50" r="1.5"/>
+  </g>
+
+  <!-- Giant Glowing Moon -->
+  <circle cx="480" cy="260" r="130" fill="url(#giantMoon)" filter="url(#moonGlow)"/>
+  <circle cx="480" cy="260" r="180" fill="none" stroke="rgba(56,189,248,0.2)" stroke-width="2"/>
+  <circle cx="480" cy="260" r="230" fill="none" stroke="rgba(56,189,248,0.08)" stroke-width="1.5"/>
+
+  <!-- Distant Mountain Range (Soft Blue) -->
+  <polygon points="0,520 180,360 360,480 540,320 720,450 800,380 800,600 0,600" fill="#1e293b" opacity="0.6"/>
+
+  <!-- Midground Mountains (Darker Navy) -->
+  <polygon points="0,560 140,430 320,530 480,410 650,520 800,420 800,650 0,650" fill="#0f172a" opacity="0.85"/>
+
+  <!-- Foreground Mountains & Ridge -->
+  <polygon points="0,610 210,480 390,570 590,470 780,580 800,560 800,800 0,800" fill="#090d16"/>
+
+  <!-- Misty Horizon Water Reflection -->
+  <rect x="0" y="630" width="800" height="170" fill="url(#lakeGrad)"/>
+  
+  <!-- Moon Reflection Shimmer -->
+  <ellipse cx="480" cy="680" rx="90" ry="12" fill="rgba(56,189,248,0.25)" filter="url(#moonGlow)"/>
+  <ellipse cx="480" cy="720" rx="140" ry="16" fill="rgba(56,189,248,0.15)" filter="url(#moonGlow)"/>
+
+  <!-- Pine Tree Silhouettes (Left & Right framing) -->
+  <!-- Left Ridge Trees -->
+  <polygon points="40,550 55,620 25,620" fill="#020617"/>
+  <polygon points="40,520 52,580 28,580" fill="#020617"/>
+  <polygon points="80,570 95,640 65,640" fill="#020617"/>
+  <polygon points="120,590 135,660 105,660" fill="#020617"/>
+
+  <!-- Right Torii / Shrine Silhouette -->
+  <rect x="670" y="550" width="8" height="90" fill="#020617"/>
+  <rect x="730" y="550" width="8" height="90" fill="#020617"/>
+  <rect x="655" y="565" width="95" height="10" rx="2" fill="#020617"/>
+  <rect x="665" y="580" width="75" height="7" rx="1" fill="#020617"/>
+</svg>
