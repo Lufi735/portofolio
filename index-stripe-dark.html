@@ -7844,7 +7844,8 @@ body.is-pixel-resolving #h-bio {
         <span id="tab-lbl-models">3D Modeller</span>
         <span class="tab-badge">6</span>
       </button>
-      <button class="s-tab tab-code" id="tb-code" onclick="switchStripeTab('code')">
+      <!-- Kod & Motor gecici olarak gizlendi -->
+      <button class="s-tab tab-code" id="tb-code" onclick="switchStripeTab('code')" style="display:none !important;">
         <svg class="svg-icon-sm" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
         <span id="tab-lbl-code">Kod &amp; Motor</span>
         <span class="tab-badge">3</span>
@@ -8785,42 +8786,54 @@ body.is-pixel-resolving #h-bio {
             <!-- Features Grid -->
             <div class="lufi-features-grid">
               <div class="lufi-feat-item">
-                <span class="lufi-feat-icon">🎨</span>
+                <span class="lufi-feat-icon" style="color:#38bdf8;">
+                  <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path></svg>
+                </span>
                 <div>
                   <span class="lufi-feat-title" id="lufi-f1-t">Piksel &amp; Serbest Çizim</span>
                   <span class="lufi-feat-sub" id="lufi-f1-s">Dither, fırçalar, simetri ve palet motoru</span>
                 </div>
               </div>
               <div class="lufi-feat-item">
-                <span class="lufi-feat-icon">⏱️</span>
+                <span class="lufi-feat-icon" style="color:#38bdf8;">
+                  <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </span>
                 <div>
                   <span class="lufi-feat-title" id="lufi-f2-t">Timeline Animasyon</span>
                   <span class="lufi-feat-sub" id="lufi-f2-s">Kare kare döngü, onion skinning, GIF export</span>
                 </div>
               </div>
               <div class="lufi-feat-item">
-                <span class="lufi-feat-icon">🧊</span>
+                <span class="lufi-feat-icon" style="color:#38bdf8;">
+                  <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                </span>
                 <div>
                   <span class="lufi-feat-title" id="lufi-f3-t">3D Model Dönüştürücü</span>
                   <span class="lufi-feat-sub" id="lufi-f3-s">OBJ/GLB modelleri 6 açıyla pikselleme</span>
                 </div>
               </div>
               <div class="lufi-feat-item">
-                <span class="lufi-feat-icon">🗺️</span>
+                <span class="lufi-feat-icon" style="color:#38bdf8;">
+                  <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                </span>
                 <div>
                   <span class="lufi-feat-title" id="lufi-f4-t">Tilemap &amp; Seviye Editörü</span>
                   <span class="lufi-feat-sub" id="lufi-f4-s">Autotiling, TMX ve Godot .tscn entegrasyonu</span>
                 </div>
               </div>
               <div class="lufi-feat-item">
-                <span class="lufi-feat-icon">💡</span>
+                <span class="lufi-feat-icon" style="color:#38bdf8;">
+                  <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                </span>
                 <div>
                   <span class="lufi-feat-title" id="lufi-f5-t">2D Dinamik Işık &amp; Normal Map</span>
                   <span class="lufi-feat-sub" id="lufi-f5-s">Gerçek zamanlı nokta ışık ve kabartma efekti</span>
                 </div>
               </div>
               <div class="lufi-feat-item">
-                <span class="lufi-feat-icon">🦴</span>
+                <span class="lufi-feat-icon" style="color:#38bdf8;">
+                  <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                </span>
                 <div>
                   <span class="lufi-feat-title" id="lufi-f6-t">İskelet &amp; Rigging</span>
                   <span class="lufi-feat-sub" id="lufi-f6-s">Kemik hiyerarşisi ile parça tabanlı animasyon</span>
